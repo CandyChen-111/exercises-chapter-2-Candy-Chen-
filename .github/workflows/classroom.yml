@@ -21,7 +21,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: exercise-2-3
-        setup-command: python3 -m venv venv; venv/bin/python -m pip install pytest numpy
+        setup-command: python3 -m venv venv && venv/bin/python -m pip install --upgrade pip && venv/bin/python -m pip install pytest numpy -e .
         command: "venv/bin/python -m pytest tests/test_exercise_2_3.py"
         timeout: 1
         max-score: 1
