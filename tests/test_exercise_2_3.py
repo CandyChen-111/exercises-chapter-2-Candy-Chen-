@@ -13,5 +13,4 @@ def test_import_isprime():
                                           (100, False)])
 def test_isprime(value, prime):
     from math_utils.primes import isprime
-    print("test")
     assert isprime(value) == prime, "Incorrect return value from isprime"
